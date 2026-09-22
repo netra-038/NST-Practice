@@ -1,0 +1,28 @@
+LAB 6 LOGBOOK - Netra Gupta - E26B07F0611
+SETUP: my working directory is nst
+T1 prediction: I think ls / will show about 20 items
+T1: /bin holds 37 commands
+T1: /dev holds 342 files
+T1: / means root directory , ~ means shortcut for user home folder , . means current working directory
+T1: the OS groups files by MetaData and File Extensions
+T2 prediction: ./deploy will not work because it does not have executable permission
+T2 prediction: appending after u-w will give an error because we took away the writing permission
+T2: -rw-r--r-- written in numbers is 644
+T2: ./deploy failed at first because it did not have executable permission
+T2: the new policy needed chmod 750
+-rwxr-x---  1 netragupta  staff  36  8 Sep 13:50 deploy
+T3 prediction: ./nst-info will not work because by default no file has execute permission
+T3 prediction: adding .py to the name will not make any change
+T3: python3 nst-info worked but ./nst-info failed because python3 nst-info does not need any execute permission but ./nst-info needs it.
+T3: renaming the file to .py changed nothing.
+T3: file extensions are actually used by the user not the OS
+T4 prediction: a file called ls in ~/nst/bin will give a list of commands in bin
+T4: nst-info failed from /tmp because because it was not in the path
+T4: the full path worked because the system knew where to look for the file
+T4: PATH is searched from left to right and stops at the first match it gets
+T4: my fake ls took over because the shell found it first
+T4: the PATH change vanished in a new terminal because it only lasts for one terminal session
+EXIT 1: a file has -rw-r--r--. running ./file does not work and the one command that fixes it is chmod +x
+EXIT 2: python3 script works but ./script says permission denied. explained to a friend: because the system requires execute permission to run a file but python3 does not need that permission
+EXIT 3: PATH worked yesterday, gone this morning, nobody touched the file. what happened: because it lasts for one terminal session only
+EXIT 4: one prediction I got wrong today, and what I learned from it: I got the T4 prediction(the one about ls) wrong and i learned that the system searches the path and gives the first match it finds

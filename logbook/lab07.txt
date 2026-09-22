@@ -1,0 +1,11 @@
+LAB 7 LOGBOOK - Netra Gupta - E26B07F0611
+SETUP: clang version 21.0.0 python3 version 3.9.6
+T1: running hello.py created 0 new files
+T1 prediction: ./hello.c will not work and python3 hello.c will work
+T1: ./hello.c failed because it did not have execute permission ; python3 hello.c failed because of syntax error given by the python program as the c syntax and python syntax is different
+T1: the extra step in the C workflow is compiling and it produces an extra file on the disk
+T1: when I run python3 hello.py the CPU executes python3 ; hello.py is just data
+T1: hello.c is 78 bytes and hello is 33432 bytes. my guess for why: is because hello is compiling and translating the code written in hello.c
+T2: file says hello is Mach-O 64-bit executable arm64 (copy the whole line)
+T2 prediction: python3 itself is program text, like a script
+T2: python3 is machine code, like hello so when I run python3 hello.py the CPU executes pythn3 and reads hello.py as data
